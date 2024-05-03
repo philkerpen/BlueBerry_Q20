@@ -186,7 +186,7 @@
             bindings = <        
                 		&to  0                                                                            	 &to  0
 
-    	         	&mtt K_PREV K_VOL_DN		 &kp K_SCROLL_UP	        &kp K_PP			&kp K_SCROLL_DOWN	 &mtt K_NEXT K_VOL_UP
+    	         	&kp K_SCROLL_UP			&mtt K_PREV K_VOL_DN	        &kp K_PP			&mtt K_NEXT K_VOL_UP	&kp K_SCROLL_DOWN
 
     &mtt TILDE HASH	   	&mtt HOME N1	   &mtt UP	N2	   &mtt END     N3	   &mtt LBKT LPAR	&mtt RBKT RPAR	   &mtt LT UNDER     &mtt GT MINUS	 &mtt CARET PLUS	&mtt PERCENT AT
     &mtt EQUAL STAR		&mtt LEFT N4	   &mtt DOWN	N5	   &mtt RIGHT	N6	   &mtt BSLH SLASH	&mtt PIPE COLON	   &mtt AMPS SEMI    &mtt APOS APOS	 &mtt DQT DQT     	&mtt DEL BSPC
@@ -207,7 +207,7 @@
 
     &none       	&none   	&none     	&sys_reset	&ext_power EP_TOG	   &none         	&none	           &none           &none      	   &none
     &none   		&none	  	&none	 	&none     	&none	          	   &none     	 	&none	           &none	   &none      	   &none
-    &to  0  		&none    	&none    	&none      	&bl BL_DEC       	   &bl BL_TOG   	&bl BL_INC         &none           &bootloader     &none
+    &to  0  		&none    	&none    	&none		&bl BL_DEC       	   &bl BL_TOG   	&bl BL_INC         &none           &bootloader     &none
 
     		&to  0               		 &none	               	      &out OUT_TOG              &none                    &none
             >;
