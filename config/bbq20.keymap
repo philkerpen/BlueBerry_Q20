@@ -201,7 +201,7 @@
                               \      aA        |       0        |                    SPACE                  |          SYM          |         aA    /
                                 -------------------------------------------------------------------------------------------------------------------
         */
-                 		&to  0                                                                                	&MED
+                 		&none                                                                                	&none
 
 		            &mtt  K_CMENU TAB		 &msk LGUI LGUI		      &mkp LCLK			&mtt ESC K_BACK		 &mkp RCLK
 
@@ -218,7 +218,7 @@
         alt_layer {
 
             bindings = <        
-                		&to  0                                                                            	 &to  0
+                		&none                                                                           	 &none
 
     	         	&kp K_SCROLL_UP			&mtt K_PREV K_VOL_DN	        &kp K_PP			&mtt K_NEXT K_VOL_UP	&kp K_SCROLL_DOWN
 
@@ -236,7 +236,7 @@
 
             bindings = <      
 
-		&to  0													&to  0
+		&none													&none
  
     		&mkp LCLK			&mkp RCLK			&mkp MCLK				&mkp MB4				&mkp MB5  
 
@@ -252,7 +252,7 @@
 
             bindings = <        
 
-		&to  0													&to  0
+		&none													&none
 
     		&bt BT_SEL 0            	 &bt BT_SEL 1                 &bt BT_CLR                &bt BT_SEL 2             &bt BT_SEL 3
 
