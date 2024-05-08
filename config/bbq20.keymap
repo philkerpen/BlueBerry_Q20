@@ -41,29 +41,29 @@
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&mkp LCLK>, <&bt BT_CLR>;
         };
 
         ALTL: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&sl ALT>, <&to ALT>;
         };
 
         SHFT: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             bindings = <&sk LSHFT>, <&kp CLCK>;
         };
 
         MED: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&sl MEDIA>, <&to MEDIA>;
+            tapping-term-ms = <250>;
+            bindings = <&to 0>, <&to MEDIA>;
         };
 
         MAN: tap_dance_4 {
@@ -76,17 +76,23 @@
         EALT: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             bindings = <&sk LALT>, <&kp LALT>;
         };
 
         ECTRL: tap_dance_6 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             bindings = <&sk LCTRL>, <&kp LC(SPACE)>;
         };
 
+        EMU: tap_dance_7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&to 0>, <&to MEDIA>;
+        };
 
 // Macro Behaviors
 
@@ -148,7 +154,7 @@
 	      tapping-term-ms = <200>;
 	      quick-tap-ms = <125>;
 	      require-prior-idle-ms = <125>;
-	      bindings = <&kp>, <&sk>;
+	      bindings = <&sk>, <&kp>;
    	 };
 
 	alt_to: behavior_alt_to {
@@ -195,9 +201,9 @@
                               \      aA        |       0        |                    SPACE                  |          SYM          |         aA    /
                                 -------------------------------------------------------------------------------------------------------------------
         */
-                 		&to  0                                                                                	&MAN
+                 		&to  0                                                                                	&MED
 
-		            &mtt  K_CMENU TAB		 &kp LGUI		      &mkp LCLK			&mtt ESC K_BACK		 &mkp RCLK
+		            &mtt  K_CMENU TAB		 &msk LGUI LGUI		      &mkp LCLK			&mtt ESC K_BACK		 &mkp RCLK
 
     &mtt LS(Q) Q	&mtt LS(W) W      &mtt LS(E) E	&mtt LS(R) R     &mtt LS(T) T	&mtt LS(Y) Y	&mtt LS(U) U	&mtt LS(I) I	&mtt LS(O) O	    &mtt LS(P) P
     &mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L        &kp BSPC
@@ -228,8 +234,25 @@
 
         upper_layer {
 
+            bindings = <      
+
+		&to  0													&to  0
+ 
+    		&mkp LCLK			&mkp RCLK			&mkp MCLK				&mkp MB4				&mkp MB5  
+
+    &kp Q		&kp W     	&kp E    	&kp R	  	  	&kp T			&kp Y		&kp U	    	&kp I	 	 &kp O		&kp P
+    &kp A	     	&kp S   	&kp D      	&kp F	 		&kp G		     	&kp H	      	&kp J       	&kp K       	 &kp L		&kp BSPC
+    &EMU	 	&kp Z     	&kp X     	&kp C    		&kp V	     		&kp B		&kp N        	&kp M       	 &kp DLLR	&kp ENTER
+	
+    		&SHFT				 &kp N0				&kp SPACE				&sk LALT				&sk LCTRL
+            >;
+        };
+
+        media_layer {
+
             bindings = <        
-                 &to  0                                                                                       &to  0
+
+		&to  0													&to  0
 
     		&bt BT_SEL 0            	 &bt BT_SEL 1                 &bt BT_CLR                &bt BT_SEL 2             &bt BT_SEL 3
 
@@ -237,22 +260,7 @@
     &none   		&none	  	&none	 	&none     	&none	          	   &none     	 	&none	           &none	   &none      	   &none
     &to  0  		&none    	&none    	&none		&bl BL_DEC       	   &bl BL_TOG   	&bl BL_INC         &none           &bootloader     &none
 
-    		&to  0               		 &none	               	      &out OUT_TOG              &none                    &none
-            >;
-        };
-
-        media_layer {
-
-            bindings = <        
-		&to  0													&to  0
- 
-    &none			&none			&none				&none				&none  
-
-    &none		&none     	&none    	&none  	  		&none			&none		&none    	&none	 	 &none		&none
-    &none	     	&none   	&none      	&none	 		&none		     	&none	      	&none       	&none       	 &none		&none
-    &none     	 	&none     	&none     	&none    		&none	     		&none		&none       	&none       	 &none		&none
-	
-    &none			&to  0			&none				&none				&none
+    		&to  0               		 &none	               	      &out OUT_TOG              &sk LALT                    &sk LCTRL
             >;
         };
     };
