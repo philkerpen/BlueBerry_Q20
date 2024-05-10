@@ -18,14 +18,17 @@ The BlueBerry ZMK firmware is a personal project, independent of any commercial 
 - [Magsafe Popsocket Used](https://a.co/d/3kA9kbC)
 
 # BlueBerry Firmware Links
+### Android Firmware Links:
 1. [Android Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/9019868669/artifacts/1488249337)
 2. [Android Q20 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q20/actions/runs/9019822666/artifacts/1488237333)
-3. [Android 9900 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_9900/actions/runs/9019991534/artifacts/1488290317) 
-4. [iOS Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/9030102844/artifacts/1490631292)
-5. [iOS Q20 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q20/actions/runs/9030094042/artifacts/1490630114)
-6. [iOS 9900 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_9900/actions/runs/9030429877/artifacts/1490707773)
-7. Unzip the firmware.zip file. You should see one files: `bbqXX-zmk.uf2`.
-8. Flash the keyboard with your new firmware.[How to flash the firmware](https://github.com/ZitaoTech/BB9900-USB_BLE_Keyboard?tab=readme-ov-file#-how-to-update-the-firmware---)
+3. [Android 9900 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_9900/actions/runs/9019991534/artifacts/1488290317)
+### iOS Firmware Links:
+1. [iOS Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/9030102844/artifacts/1490631292)
+2. [iOS Q20 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q20/actions/runs/9030094042/artifacts/1490630114)
+3. [iOS 9900 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_9900/actions/runs/9030429877/artifacts/1490707773)
+### Installation:
+1. Unzip the firmware.zip file. You should see one files: `bbqXX-zmk.uf2`.
+2. Flash the keyboard with your new firmware.[How to flash the firmware](https://github.com/ZitaoTech/BB9900-USB_BLE_Keyboard?tab=readme-ov-file#-how-to-update-the-firmware---)
 
 # Android Firmware Overview:
 
