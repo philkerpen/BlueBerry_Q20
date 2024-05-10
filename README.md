@@ -21,8 +21,8 @@ The BlueBerry ZMK firmware is a personal project, independent of any commercial 
 1. [Android Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/9019868669/artifacts/1488249337)
 2. [Android Q20 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q20/actions/runs/9019822666/artifacts/1488237333)
 3. [Android 9900 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_9900/actions/runs/9019991534/artifacts/1488290317) 
-4. [iOS Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/8954097735/artifacts/1473599447)
-5. [iOS Q20 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q20/actions/runs/8958206387/artifacts/1474314987)
+4. [iOS Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/9030102844/artifacts/1490631292)
+5. [iOS Q20 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q20/actions/runs/9030094042/artifacts/1490630114)
 6. [iOS 9900 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_9900/actions/runs/8999289456/artifacts/1483449046)
 7. Unzip the firmware.zip file. You should see one files: `bbqXX-zmk.uf2`.
 8. Flash the keyboard with your new firmware.[How to flash the firmware](https://github.com/ZitaoTech/BB9900-USB_BLE_Keyboard?tab=readme-ov-file#-how-to-update-the-firmware---)
@@ -33,7 +33,7 @@ The BlueBerry ZMK firmware is a personal project, independent of any commercial 
 
 ![10](https://github.com/Drexel-Macintosh/BlueBerry_Q10/assets/88599898/3cb2f34a-dedf-4d3e-8792-6abb80fc73c8)
 
-![AND L0](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/93cf7d41-a725-48bc-8d67-b89418a2341f)
+![AND L0](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/55802121-c283-43a3-9702-af90f9ad9cc2)
 
 ![And L1](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/8536bd06-2883-4204-92b1-fac00291cba0)
 
@@ -46,10 +46,10 @@ The BlueBerry ZMK firmware is a personal project, independent of any commercial 
 - [How to use a mouse on your iOS Device](https://support.apple.com/en-us/111775)
 - [Learn iOS keyboard shortcuts](https://support.apple.com/en-us/102393)
 
-![10](https://github.com/Drexel-Macintosh/BlueBerry_Q10/assets/88599898/3cb2f34a-dedf-4d3e-8792-6abb80fc73c8)
+![iOS L0](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/86f01c95-5b17-4f80-a811-78959f5d4a3a)
 
-![iOS L0](https://github.com/Drexel-Macintosh/BlueBerry_Q10/assets/88599898/d9bc5d61-c896-4f48-a3d9-c43c6e8bb20b)
+![iOS L1](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/357ed89b-4c43-4e05-90f7-0239505a9af3)
 
-![iOS L1](https://github.com/Drexel-Macintosh/BlueBerry_Q10/assets/88599898/28a79331-b436-441e-8bd4-3ce69aabd036)
+![iOS L2](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/275b7f1f-82aa-4ece-bf35-40ee86630166)
 
-![2024-04-20_18-35-23](https://github.com/Drexel-Macintosh/BlueBerry_Q10/assets/88599898/70d6b2aa-5741-49b2-ac5e-207c464174ff)
+![iOS L3](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/21c3f2e1-984a-4038-86fa-9ea94280e36d)
