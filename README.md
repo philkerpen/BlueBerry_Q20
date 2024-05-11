@@ -29,8 +29,8 @@ The BlueBerry ZMK firmware is a personal project, independent of any commercial 
 2. [iOS Q20 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q20/actions/runs/9030094042/artifacts/1490630114)
 3. [iOS 9900 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_9900/actions/runs/9030429877/artifacts/1490707773)
 ### Installation:
-1. Unzip the firmware.zip file. You should see one files: `bbqXX-zmk.uf2`.
-2. Flash the keyboard with your new firmware.[How to flash the firmware](https://github.com/ZitaoTech/BB9900-USB_BLE_Keyboard?tab=readme-ov-file#-how-to-update-the-firmware---)
+1. Unzip the firmware.zip file: `bbqXX-zmk.uf2`.
+2. Flash the keyboard with your new firmware.[How to flash firmware](https://github.com/ZitaoTech/BB9900-USB_BLE_Keyboard?tab=readme-ov-file#-how-to-update-the-firmware---)
 
 # Physical Layout and "Sticky Keys / Layers" Overview:
 
