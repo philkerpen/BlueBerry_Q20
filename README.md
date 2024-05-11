@@ -32,11 +32,13 @@ The BlueBerry ZMK firmware is a personal project, independent of any commercial 
 1. Unzip the firmware.zip file. You should see one files: `bbqXX-zmk.uf2`.
 2. Flash the keyboard with your new firmware.[How to flash the firmware](https://github.com/ZitaoTech/BB9900-USB_BLE_Keyboard?tab=readme-ov-file#-how-to-update-the-firmware---)
 
+# Physical Layout and "Sticky Keys / Layers" Overview:
+
+![Physical Layout](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/e96a2fc9-c018-49b5-9597-0a4ab887cb59)
+
 # Android Firmware Overview:
 
 - [Android Keyboard Shortcuts](https://www.androidpolice.com/android-14-physical-keyboard-shortcuts-list/)
-
-![10](https://github.com/Drexel-Macintosh/BlueBerry_Q10/assets/88599898/3cb2f34a-dedf-4d3e-8792-6abb80fc73c8)
 
 ![AND L0](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/55802121-c283-43a3-9702-af90f9ad9cc2)
 
