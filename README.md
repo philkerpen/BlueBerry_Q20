@@ -1,12 +1,12 @@
 # Project BlueBerry: An Open-Source, Detachable Keyboard and Mouse Firmware for Any Smartphone - No 3D Printing Required!
 
+[![PB](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/82291aee-df62-422e-8770-3753ee1866dd)](https://www.youtube.com/watch?v=bnA4d6uEKS0)
+
 [![PB](https://github.com/Drexel-Macintosh/BlueBerry_Q10/assets/88599898/5ad6ee8d-2283-4bd6-a32e-93378a7d4610)](https://www.youtube.com/watch?v=bnA4d6uEKS0)
 
 # What is it?
 
 The BlueBerry ZMK firmware is a personal project, independent of any commercial affiliations. Its aim is to create a highly optimized, device-agnostic Bluetooth keyboard firmware suitable for any smartphone.
-
-[![PB](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/82291aee-df62-422e-8770-3753ee1866dd)](https://www.youtube.com/watch?v=bnA4d6uEKS0)
 
 # Support Links
 - [Android YouTube Video Demonstration](https://www.youtube.com/watch?v=bnA4d6uEKS0)
