@@ -6,7 +6,7 @@
 
 The BlueBerry ZMK firmware is a personal project, independent of any commercial affiliations. Its aim is to create a highly optimized, device-agnostic Bluetooth keyboard firmware suitable for any smartphone.
 
-[![PB](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/170a5549-71df-48ac-9150-cc5623671dec)](https://www.youtube.com/watch?v=bnA4d6uEKS0)
+[![PB](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/0e24717f-87bb-4fd4-b8e2-b052736c0481)](https://www.youtube.com/watch?v=bnA4d6uEKS0)
 
 # Support Links
 - [Android YouTube Video Demonstration](https://www.youtube.com/watch?v=bnA4d6uEKS0)
