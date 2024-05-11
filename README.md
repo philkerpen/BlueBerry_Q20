@@ -21,11 +21,11 @@ The BlueBerry ZMK firmware is a personal project, independent of any commercial 
 
 # BlueBerry Firmware Links
 ### Android Firmware Links:
-1. [Android Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/9019868669/artifacts/1488249337)
+1. [Android Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/9029940252/artifacts/1490599586)
 2. [Android Q20 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q20/actions/runs/9043701808/artifacts/1493595819)
 3. [Android 9900 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_9900/actions/runs/9019991534/artifacts/1488290317)
 ### iOS Firmware Links:
-1. [iOS Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/9030102844/artifacts/1490631292)
+1. [iOS Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/9042510449/artifacts/1493430563)
 2. [iOS Q20 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q20/actions/runs/9043831141/artifacts/1493611144)
 3. [iOS 9900 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_9900/actions/runs/9030429877/artifacts/1490707773)
 ### Installation:
