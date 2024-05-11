@@ -4,9 +4,9 @@
 
 # What is it?
 
-![BlueBerry BlackBerry Keyboard _ iPhone Typing Demo](https://github.com/Drexel-Macintosh/BlueBerry_Q10/assets/88599898/c5f307bc-4441-454f-bf24-0455b30eec78)
-
 The BlueBerry ZMK firmware is a personal project, independent of any commercial affiliations. Its aim is to create a highly optimized, device-agnostic Bluetooth keyboard firmware suitable for any smartphone.
+
+[![PB](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/170a5549-71df-48ac-9150-cc5623671dec)](https://www.youtube.com/watch?v=bnA4d6uEKS0)
 
 # Support Links
 - [Android YouTube Video Demonstration](https://www.youtube.com/watch?v=bnA4d6uEKS0)
