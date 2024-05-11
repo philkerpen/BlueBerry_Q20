@@ -2,7 +2,7 @@
 
 [![PB](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/82291aee-df62-422e-8770-3753ee1866dd)](https://www.youtube.com/watch?v=bnA4d6uEKS0)
 
-[![PB](https://github.com/Drexel-Macintosh/BlueBerry_Q10/assets/88599898/5ad6ee8d-2283-4bd6-a32e-93378a7d4610)](https://www.youtube.com/watch?v=bnA4d6uEKS0)
+[![PB](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/045d07af-ed4b-49e6-8ce4-a7faf4a95a3e)](https://www.youtube.com/watch?v=bnA4d6uEKS0)
 
 # What is it?
 
