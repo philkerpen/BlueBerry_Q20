@@ -17,6 +17,8 @@ The BlueBerry ZMK firmware is a personal project, independent of any commercial 
 - [Metal Mount Plates Used](https://www.amazon.com/dp/B00O2HYV7K?psc=1&ref=ppx_yo2ov_dt_b_product_details )
 - [Magsafe Popsocket Used](https://a.co/d/3kA9kbC)
 
+![Products Used](https://github.com/Drexel-Macintosh/BlueBerry_Q20/assets/88599898/b6833638-01c2-42ae-a15e-b2bac9c7e5fb)
+
 # BlueBerry Firmware Links
 ### Android Firmware Links:
 1. [Android Q10 Firmware Link](https://github.com/Drexel-Macintosh/BlueBerry_Q10/actions/runs/9019868669/artifacts/1488249337)
