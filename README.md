@@ -14,7 +14,7 @@ The BlueBerry ZMK firmware is a personal project, independent of any commercial 
 - [Hackaday](https://hackaday.com/2024/05/11/blueberry-is-a-smartphone-agnostic-keyboard-firmware/)
 
 # Products Used:
-- [ZitaoTech Bluetooth Keyboard](https://www.tindie.com/stores/zitaotech/)
+- [ZitaoTech Bluetooth Keyboard Tindie(US)](https://www.tindie.com/stores/zitaotech/) or [ZitaoTech Bluetooth Keyboard Lectronz (EU)](https://lectronz.com/stores/zitaotech)
 - [Metal Mount Plates](https://www.amazon.com/dp/B00O2HYV7K?psc=1&ref=ppx_yo2ov_dt_b_product_details )
 - [Magsafe Popsocket](https://a.co/d/3kA9kbC) or [AliExpress Alternative](https://www.aliexpress.us/item/3256804709417329.html?srcSns=sns_Copy&spreadType=socialShare&bizType=ProductDetail&social_params=21470077898&aff_fcid=7f7e7067c97b4f2c97bcb6999634f05e-1715407595785-06866-_mqSflI2&tt=MG&aff_fsk=_mqSflI2&aff_platform=default&sk=_mqSflI2&aff_trace_key=7f7e7067c97b4f2c97bcb6999634f05e-1715407595785-06866-_mqSflI2&shareId=21470077898&businessType=ProductDetail&platform=AE&terminal_id=52b598ed8fb84b10a4046ce630d92d76&afSmartRedirect=y&gatewayAdapt=glo2usa)
 
