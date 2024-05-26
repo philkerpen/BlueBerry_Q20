@@ -103,20 +103,48 @@
 
 // Macro Behaviors
 
-    tap: tap {
-      compatible = "zmk,behavior-macro-one-param";
-      #binding-cells = <1>;
-      bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-   	 };
+	tap: tap {
+		compatible = "zmk,behavior-macro-one-param";
+     		#binding-cells = <1>;
+      		bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+   	 	};
 
-        glo: globe_pseudo_mod {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings
-                = <&macro_press &kp GLOBE>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp GLOBE>;
+	glo: globe_pseudo_mod {
+           	compatible = "zmk,behavior-macro-one-param";
+            	#binding-cells = <1>;
+           	 bindings
+                	= <&macro_press &kp GLOBE>
+                	, <&macro_param_1to1>
+                	, <&macro_tap &kp MACRO_PLACEHOLDER>
+                	, <&macro_release &kp GLOBE>;
+        	};
+
+        bt0: bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4>;
+            label = "BT0";
+        };
+
+        bt1: bt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4>;
+            label = "BT1";
+        };
+
+        bt2: bt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 3 &bt BT_DISC 4>;
+            label = "BT2";
+        };
+
+        bt3: bt3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 4>;
+            label = "BT3";
         };
 
 // Hold Tap Behaviors
@@ -271,7 +299,7 @@
 
 		&none													&none
 
-    		&bt BT_SEL 0            	 &bt BT_SEL 1                 &bt BT_CLR                &bt BT_SEL 2             &bt BT_SEL 3
+    		&bt0            	 &bt1                 &bt BT_CLR                &bt2             &bt3
 
     &none       	&none   	&none     	&sys_reset	&ext_power EP_TOG	   &none         	&none	           &none           &none      	   &none
     &none   		&none	  	&none	 	&none     	&none	          	   &none     	 	&none	           &none	   &none      	   &none
