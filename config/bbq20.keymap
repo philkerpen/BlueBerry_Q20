@@ -189,7 +189,7 @@
 	      tapping-term-ms = <200>;
 	      quick-tap-ms = <125>;
 	      require-prior-idle-ms = <125>;
-	      bindings = <&sk>, <&kp>;
+	      bindings = <&sk>, <&tap>;
    	 };
 
 	alt_to: behavior_alt_to {
