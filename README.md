@@ -31,6 +31,8 @@ The BlueBerry ZMK firmware is a personal project, independent of any commercial 
 1. [iOS Q10 Firmware Link](https://github.com/user-attachments/files/16594885/Q10.iOS.zip)
 2. [iOS Q20 Firmware Link](https://github.com/user-attachments/files/16594879/Q20.iOS.zip)
 3. [iOS 9900 Firmware Link](https://github.com/user-attachments/files/16594890/9900.iOS.zip)
+4. [iOS P'9983 Firmware Link](https://github.com/user-attachments/files/16662211/P9983.iOS.zip)
+
 ### Installation:
 1. Unzip the firmware.zip file: `bbqXX-zmk.uf2`.
 2. Flash the keyboard with your new firmware.[How to flash firmware](https://github.com/ZitaoTech/BB9900-USB_BLE_Keyboard?tab=readme-ov-file#-how-to-update-the-firmware---)
