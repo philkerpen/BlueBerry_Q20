@@ -248,7 +248,7 @@
         */
                  		&none                                                                                	&none
 
-		            &mtt  K_CMENU LG(TAB)		 &mtt LGUI LG(ENTER)	      &mkp LCLK			&mtt ESC LG(BSPC)		 &mou RCLK MCLK
+		            &mtt  K_CMENU LG(TAB)		 &mtt ESC LG(ENTER)	      &mkp LCLK			&mtt ESC LG(BSPC)		 &mou RCLK MCLK
 
     &mtt LS(Q) Q	&mtt LS(W) W      &mtt LS(E) E	&mtt LS(R) R     &mtt LS(T) T	&mtt LS(Y) Y	&mtt LS(U) U	&mtt LS(I) I	&mtt LS(O) O	    &mtt LS(P) P
     &mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L        &kp BSPC
