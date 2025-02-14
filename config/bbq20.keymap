@@ -226,6 +226,7 @@
     label = "GUI_ENTER_MACRO";
     #binding-cells = <0>;
     bindings = <&kp LG(ENTER) &kp ENTER>;
+	};
 
 //End Behvaiors here
     };
