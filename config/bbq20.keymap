@@ -103,14 +103,16 @@
 
 // Macro Behaviors
 
-&lg_enter {
+
+lg_enter: lg_enter {
     compatible = "zmk,behavior-hold-tap";
     label = "LG_ENTER";
     #binding-cells = <2>;
     flavor = "hold-preferred";
     tapping-term-ms = <200>;
     bindings = <&kp LGUI>, <&kp ENTER>;
-	};
+		};
+
 
 	tap: tap {
 		compatible = "zmk,behavior-macro-one-param";
