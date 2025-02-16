@@ -15,10 +15,11 @@
 #define UPPER 2
 #define MEDIA 3
 
-#define JOY_EMO &kp 0x01, 0xF6, 0x02
-#define USA_EMO &kp 0xF0, 0x9F, 0x87, 0xBA, 0xF0, 0x9F, 0x87, 0xB8
-#define THINK_EMO &kp 0x01, 0xF9, 0x14
-#define ROFL_EMO &kp 0x01, 0xF9, 0x23
+// Define Unicode code points for emojis
+#define JOY_EMO 0x1F602       // 😂 Face with Tears of Joy
+#define USA_EMO 0x1F1FA, 0x1F1F8 // 🇺🇸 American Flag (two code points)
+#define THINK_EMO 0x1F914     // 🤔 Thinking Face
+#define ROLLING_EMO 0x1F923  // 🤣 Rolling on the Floor Laughing
 
 // Standard Behavior Configurations:
 
@@ -267,20 +268,21 @@
 
         alt_layer {
 
-            bindings = <        
-                		&none                                                                           	 &none
+            bindings = <      
 
-    	         	&kp K_PREV			&kp K_VOL_DN	        &hm2 EP_TOG K_PP		&kp K_VOL_UP	&kp K_NEXT
+                &none                               &none
 
-    &mtt TILDE HASH	   	&mtt HOME N1	   &mtt UP	N2	   ROFL_EMO	   THINK_EMO	&mtt RBKT RPAR	   USA_EMO     &mtt GT MINUS	 &mtt CARET PLUS	&mtt PERCENT AT
-    &mtt EQUAL STAR		&mtt LEFT N4	   &mtt DOWN	N5	   &mtt RIGHT	N6	   &mtt BSLH SLASH	&mtt PIPE COLON	   JOY_EMO    &mtt APOS APOS	 &mtt DQT DQT     	&mtt DEL BSPC
-    &MAN	      	     	&mtt END N7	   &mtt DOWN	N8	   &mtt PG_DN	N9	   &mtt LBRC QMARK	&mtt RBRC EXCL	   &mtt GRAVE COMMA  &mtt DOT DOT	 &mtt K_STOP LG(N)	&kp ENTER
-	
-    		         &SHFT				 &hm2 EP_TOG N0 		&kp SPACE			&EALT				 &sk LCTRL
+                &kp K_PREV            &kp K_VOL_DN         &hm2 EP_TOG K_PP        &kp K_VOL_UP        &kp K_NEXT
 
-
+                &mtt TILDE HASH        &mtt HOME N1        &mtt UP    N2        &unicode-input ROLLING_EMO        &unicode-input THINK_EMO        &mtt RBKT RPAR        &unicode-input USA_EMO         &mtt GT MINUS     &mtt CARET PLUS    &mtt PERCENT AT
+                &mtt EQUAL STAR        &mtt LEFT N4         &mtt DOWN    N5        &mtt RIGHT    N6        &mtt BSLH SLASH        &mtt PIPE COLON        &unicode-input JOY_EMO         &mtt APOS APOS     &mtt DQT DQT           &mtt DEL BSPC
+                &MAN                 &mtt END N7         &mtt DOWN    N8        &mtt PG_DN    N9        &mtt LBRC QMARK        &mtt RBRC EXCL        &mtt GRAVE COMMA     &mtt DOT DOT     &mtt K_STOP LG(N)    &kp ENTER
+        
+                &SHFT                 &hm2 EP_TOG N0            &kp SPACE                &EALT                &sk LCTRL
             >;
         };
+
+
 
         upper_layer {
 
