@@ -15,11 +15,6 @@
 #define UPPER 2
 #define MEDIA 3
 
-// Define Unicode code points for emojis
-#define JOY_EMO 0x1F602       // 😂 Face with Tears of Joy
-#define THINK_EMO 0x1F914     // 🤔 Thinking Face
-#define ROLLING_EMO 0x1F923  // 🤣 Rolling on the Floor Laughing
-
 // Standard Behavior Configurations:
 
 &mt {
@@ -267,21 +262,20 @@
 
         alt_layer {
 
-            bindings = <      
+            bindings = <        
+                		&none                                                                           	 &none
 
-                &none                               &none
+    	         	&kp K_PREV			&kp K_VOL_DN	        &hm2 EP_TOG K_PP		&kp K_VOL_UP	&kp K_NEXT
 
-                &kp K_PREV            &kp K_VOL_DN         &hm2 EP_TOG K_PP        &kp K_VOL_UP        &kp K_NEXT
+    &mtt TILDE HASH	   	&mtt HOME N1	   &mtt UP	N2	   &mtt PG_UP   N3	   &mtt LBKT LPAR	&mtt RBKT RPAR	   &mtt LT UNDER     &mtt GT MINUS	 &mtt CARET PLUS	&mtt PERCENT AT
+    &mtt EQUAL STAR		&mtt LEFT N4	   &mtt DOWN	N5	   &mtt RIGHT	N6	   &mtt BSLH SLASH	&mtt PIPE COLON	   &mtt AMPS SEMI    &mtt APOS APOS	 &mtt DQT DQT     	&mtt DEL BSPC
+    &MAN	      	     	&mtt END N7	   &mtt DOWN	N8	   &mtt PG_DN	N9	   &mtt LBRC QMARK	&mtt RBRC EXCL	   &mtt GRAVE COMMA  &mtt DOT DOT	 &mtt K_STOP LG(N)	&kp ENTER
+	
+    		         &SHFT				 &hm2 EP_TOG N0 		&kp SPACE			&EALT				 &sk LCTRL
 
-                &mtt TILDE HASH        &mtt HOME N1        &mtt UP    N2        &unicode-input ROLLING_EMO        &unicode-input THINK_EMO        &mtt RBKT RPAR        &kp U        &mtt GT MINUS     &mtt CARET PLUS    &mtt PERCENT AT
-                &mtt EQUAL STAR        &mtt LEFT N4         &mtt DOWN    N5        &mtt RIGHT    N6        &mtt BSLH SLASH        &mtt PIPE COLON        &unicode-input JOY_EMO         &mtt APOS APOS     &mtt DQT DQT           &mtt DEL BSPC
-                &MAN                 &mtt END N7         &mtt DOWN    N8        &mtt PG_DN    N9        &mtt LBRC QMARK        &mtt RBRC EXCL        &mtt GRAVE COMMA     &mtt DOT DOT     &mtt K_STOP LG(N)    &kp ENTER
-        
-                &SHFT                 &hm2 EP_TOG N0            &kp SPACE                &EALT                &sk LCTRL
+
             >;
         };
-
-
 
         upper_layer {
 
