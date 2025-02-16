@@ -274,7 +274,7 @@
 
                 &kp K_PREV            &kp K_VOL_DN         &hm2 EP_TOG K_PP        &kp K_VOL_UP        &kp K_NEXT
 
-                &mtt TILDE HASH        &mtt HOME N1        &mtt UP    N2        &unicode-input ROLLING_EMO        &unicode-input THINK_EMO        &mtt RBKT RPAR        &unicode-input USA_EMO         &mtt GT MINUS     &mtt CARET PLUS    &mtt PERCENT AT
+                &mtt TILDE HASH        &mtt HOME N1        &mtt UP    N2        &unicode-input ROLLING_EMO        &unicode-input THINK_EMO        &mtt RBKT RPAR        &macro-press zmk,keycode-unicode 0x1F1FA, 0x0000, 0x1F1F8, 0x0000        &mtt GT MINUS     &mtt CARET PLUS    &mtt PERCENT AT
                 &mtt EQUAL STAR        &mtt LEFT N4         &mtt DOWN    N5        &mtt RIGHT    N6        &mtt BSLH SLASH        &mtt PIPE COLON        &unicode-input JOY_EMO         &mtt APOS APOS     &mtt DQT DQT           &mtt DEL BSPC
                 &MAN                 &mtt END N7         &mtt DOWN    N8        &mtt PG_DN    N9        &mtt LBRC QMARK        &mtt RBRC EXCL        &mtt GRAVE COMMA     &mtt DOT DOT     &mtt K_STOP LG(N)    &kp ENTER
         
