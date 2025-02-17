@@ -14,12 +14,7 @@
 #define ALT 1
 #define UPPER 2
 #define MEDIA 3
-
-#define KEY_014A 0x014A
-
-&kp KEY_014A {
-    label = "Recents Key";
-};
+#define KC_RECENTS 0x014A
 
 // Standard Behavior Configurations:
 
@@ -254,7 +249,7 @@
         */
                  		&none                                                                                	&none
 
-		            &mtt K_CMENU KEY_014A		 &kp C_AC_HOME	      &mkp LCLK			&kp LG(BSPC)		 &mtt CLCK TAB
+		            &mtt K_CMENU KC_RECENTS		 &kp C_AC_HOME	      &mkp LCLK			&kp LG(BSPC)		 &mtt CLCK TAB
 
     &mtt LS(Q) Q	&mtt LS(W) W      &mtt LS(E) E	&mtt LS(R) R     &mtt LS(T) T	&mtt LS(Y) Y	&mtt LS(U) U	&mtt LS(I) I	&mtt LS(O) O	    &mtt LS(P) P
     &mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L        &kp BSPC
