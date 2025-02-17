@@ -17,10 +17,6 @@
 
 #define KEY_014A 0x014A // or 330 in decimal if you prefer
 
-&kp KEY_014A {
-    label = "Recents External";
-};
-
 // Standard Behavior Configurations:
 
 &mt {
@@ -232,6 +228,10 @@
 
     keymap {
         compatible = "zmk,keymap";
+
+&kp KEY_014A {
+    label = "Recents External";
+};
         default_layer {
             bindings = <
 
