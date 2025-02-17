@@ -224,10 +224,10 @@
 //End Behaviors here
     };
 
+KC_RECENT_APPS = &kp 330;
+
     keymap {
         compatible = "zmk,keymap";
-	KC_RECENT_APPS = &kp 330;
-
         default_layer {
             bindings = <
 
