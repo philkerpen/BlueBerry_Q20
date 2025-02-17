@@ -155,6 +155,15 @@
 
 // Hold Tap Behaviors
 
+	pckt: behavior_pocket {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Pocket";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <400>;
+            bindings = <&pocket_safe>, <&kp>;
+        };
+
 	KPM: behavior_KPM {
             compatible = "zmk,behavior-hold-tap";
             label = "KPM";
@@ -260,7 +269,7 @@
     &mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L        &kp BSPC
     &ALTL		&mtt LS(Z) Z      &mtt LS(X) X	&mtt LS(C) C     &mtt LS(V) V	&mtt LS(B) B	&mtt LS(N) N	&mtt LS(M) M	&mtt PSCRN DLLR     &kp ENTER
 
-    		         &SHFT				 &pocket_safe 	      &kp SPACE			&EALT		 &sk LCTRL
+    		         &SHFT				 &pckt 0 LG(N) 	      &kp SPACE			&EALT		 &sk LCTRL
 
             >;
         };
