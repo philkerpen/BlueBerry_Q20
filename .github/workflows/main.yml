@@ -32,4 +32,4 @@ jobs:
         run: |
           cd /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zmk/app
           export Zephyr_DIR=/home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zephyr/share/zephyr-package/cmake
-          west build -p -b nice_nano_v2 -- -DSHIELD=bbq20 -DZMK_CONFIG=/home/runner/work/BlueBerry_Q20/BlueBerry_Q20/config
+          west build -p -b bbq20 -- -DZMK_CONFIG=/home/runner/work/BlueBerry_Q20/BlueBerry_Q20/config
