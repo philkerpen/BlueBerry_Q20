@@ -10,7 +10,9 @@ jobs:
           fetch-depth: 0  # Fetch all history to ensure we can reset
 
       - name: Install West
-        run: pip install --upgrade west  # Ensure latest west version
+        run: |
+          pip install --upgrade west
+          west --version  # Check west version
 
       - name: Install Zephyr SDK
         run: |
@@ -30,10 +32,14 @@ jobs:
           rm -rf .west  # Remove any existing west config to start fresh
           # Clone ZMK repository to a temporary directory
           git clone --branch main https://github.com/zmkfirmware/zmk /tmp/zmk
+          # Debug ZMK clone
+          ls -la /tmp/zmk/app || echo "ZMK app directory missing"
+          cat /tmp/zmk/app/west.yml || echo "west.yml not found in /tmp/zmk/app"
           # Initialize west with the local manifest path in the current directory
           west init -l /tmp/zmk/app
           # Verify west workspace is created
           ls -la .west || echo "West workspace not created"
+          cat .west/config || echo "West config not found"
           # Clean up temporary directory
           rm -rf /tmp/zmk
 
