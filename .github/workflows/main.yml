@@ -24,7 +24,11 @@ jobs:
           ls -la /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/config
 
       - name: West Init
-        run: west init -m https://github.com/zmkfirmware/zmk --mr main --manifest-path app
+        run: |
+          # Clone ZMK repository
+          git clone --branch main https://github.com/zmkfirmware/zmk /tmp/zmk
+          # Initialize west with the local manifest path
+          west init -l /tmp/zmk/app
 
       - name: West Update
         run: |
