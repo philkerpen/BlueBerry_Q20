@@ -12,26 +12,24 @@ jobs:
 
       - name: Debug Checkout
         run: |
-          echo "Workspace: ${{ github.workspace }}"
-          ls -la config || echo "config/ missing"
-          cat config/west.yml || echo "west.yml missing"
+          echo "Root: /home/runner/work/BlueBerry_Q20/BlueBerry_Q20"
+          ls -la /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/config || echo "config/ missing"
+          cat /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/config/west.yml || echo "west.yml missing"
 
       - name: West Init
-        run: west init -l config
+        run: west init -l /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/config
 
       - name: West Update
         run: west update --fetch always
 
       - name: Debug ZMK
         run: |
-          ls -la zmk/app/include/dt-bindings/zmk || echo "input_transform.h missing"
-          ls -la zephyr || echo "zephyr/ missing"
-          ls -la zephyr/share/zephyr-package/cmake || echo "Zephyr CMake missing"
+          ls -la /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zmk/app/include/dt-bindings/zmk || echo "input_transform.h missing"
+          ls -la /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zephyr || echo "zephyr/ missing"
+          ls -la /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zephyr/share/zephyr-package/cmake || echo "Zephyr CMake missing"
 
       - name: Build
         run: |
-          cd zmk/app
-          echo "Zephyr base: ${{ github.workspace }}/zephyr"
-          ls -la ${{ github.workspace }}/zephyr || echo "Zephyr not found"
-          export ZEPHYR_BASE=${{ github.workspace }}/zephyr
-          west build -p -b nice_nano_v2 -- -DSHIELD=bbq20 -DZMK_CONFIG=${{ github.workspace }}/config
+          cd /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zmk/app
+          export Zephyr_DIR=/home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zephyr/share/zephyr-package/cmake
+          west build -p -b nice_nano_v2 -- -DSHIELD=bbq20 -DZMK_CONFIG=/home/runner/work/BlueBerry_Q20/BlueBerry_Q20/config
