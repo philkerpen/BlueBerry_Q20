@@ -93,6 +93,10 @@ RC(2,3)          RC(2,1)             RC(3,1)             RC(4,1)          RC(6,2
     };
 };
 
+&msc_input_listener {
+    device = <&wrapped_mouse_scroll>; 
+};
+
 &adc {
     status = "okay";
 };
