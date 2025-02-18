@@ -10,7 +10,7 @@ jobs:
           fetch-depth: 0  # Fetch all history to ensure we can reset
 
       - name: Install West
-        run: pip install west
+        run: pip install --upgrade west  # Ensure latest west version
 
       - name: Install Zephyr SDK
         run: |
@@ -25,12 +25,15 @@ jobs:
 
       - name: West Init
         run: |
-          # Ensure we're in the correct directory
+          # Ensure we're in the correct directory and clean up any existing .west
           cd /home/runner/work/BlueBerry_Q20/BlueBerry_Q20
+          rm -rf .west  # Remove any existing west config to start fresh
           # Clone ZMK repository to a temporary directory
           git clone --branch main https://github.com/zmkfirmware/zmk /tmp/zmk
           # Initialize west with the local manifest path in the current directory
           west init -l /tmp/zmk/app
+          # Verify west workspace is created
+          ls -la .west || echo "West workspace not created"
           # Clean up temporary directory
           rm -rf /tmp/zmk
 
