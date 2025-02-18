@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3  # Clones to ${{ github.workspace }}
+        uses: actions/checkout@v3
 
       - name: Install West
         run: pip install west
@@ -19,20 +19,20 @@ jobs:
           cat config/west.yml || echo "west.yml missing"
 
       - name: West Init
-        run: |
-          west init -l config || echo "Init failed"
+        run: west init -l config
 
       - name: West Update
+        run: west update --fetch always
+
+      - name: Debug ZMK
         run: |
-          west update --fetch always || echo "Update failed"
           ls -la zmk || echo "zmk/ not found"
           ls -la zmk/app || echo "zmk/app/ not found"
           ls -la zmk/app/include/dt-bindings/zmk || echo "dt-bindings not found"
 
       - name: Build
         run: |
-          cd zmk || echo "cd zmk failed"
+          cd zmk/app || echo "cd zmk/app failed"
           pwd
           ls -la
-          ls -la app || echo "app/ not found"
-          west build -p -b nice_nano_v2 -- -DSHIELD=bbq20 -DZMK_CONFIG=${{ github.workspace }}/config || echo "Build failed"
+          west build -p -b nice_nano_v2 -- -DSHIELD=bbq20 -DZMK_CONFIG=${{ github.workspace }}/config
