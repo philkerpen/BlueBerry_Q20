@@ -1,5 +1,29 @@
+name: Build ZMK Firmware
 on: [push, pull_request, workflow_dispatch]
-
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - board: bbq20  # From your build.yaml
+    steps:
+      - name: Checkout Config Repo
+        uses: actions/checkout@v3
+        with:
+          path: config
+
+      - name: Install West
+        run: pip install west
+
+      - name: West Init
+        run: west init -l config
+
+      - name: West Update
+        run: |
+          west update --fetch always
+          ls -la zmk/app/include/dt-bindings/zmk/ || echo "ZMK fetch failed"
+
+      - name: Build Firmware
+        run: |
+          west build -p -b ${{ matrix.board }} -- -DZMK_CONFIG=${{ github.workspace }}/config
