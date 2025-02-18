@@ -29,8 +29,11 @@ jobs:
       - name: West Update
         run: west update --fetch always
 
-      - name: Debug ZMK
+      - name: Debug ZMK Version
         run: |
+          cd /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zmk
+          git rev-parse HEAD || echo "Git commit not found"
+          git log -1 --pretty=format:"%h - %s (%ci)" || echo "Git log failed"
           ls -la /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zmk/app/include/dt-bindings/zmk || echo "input_transform.h missing"
           ls -la /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zephyr || echo "zephyr/ missing"
           ls -la /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zephyr/share/zephyr-package/cmake || echo "Zephyr CMake missing"
@@ -41,4 +44,4 @@ jobs:
           export Zephyr_DIR=/home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zephyr/share/zephyr-package/cmake
           export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
           export ZEPHYR_SDK_INSTALL_DIR=/opt/zephyr-sdk-0.16.8
-          west build -p -b bbq20 -- -DZMK_CONFIG=/home/runner/work/BlueBerry_Q20/BlueBerry_Q20/config
+          west build -p -b bbq20 -- -DZMK_CONFIG=/home/runner/work/BlueBerry_Q20/BlueBerry_Q20/config -I/home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zmk/app/include
