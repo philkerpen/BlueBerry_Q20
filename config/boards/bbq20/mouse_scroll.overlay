@@ -1,0 +1,8 @@
+#include <dt-bindings/input/input-event-codes.h>
+#define INPUT_REL_WHEEL_INVERTED  (INPUT_REL_WHEEL | INPUT_REL_REVERSE)
+// #define INPUT_REL_HWHEEL_INVERTED (INPUT_REL_HWHEEL | INPUT_REL_REVERSE)  // Only define if you want to invert horizontal scroll as well
+
+&msc {
+    y-input-code = <INPUT_REL_WHEEL_INVERTED>; // Invert vertical scroll
+    // x-input-code = <INPUT_REL_HWHEEL>;     // Leave horizontal scroll as is
+};
