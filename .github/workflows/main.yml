@@ -22,7 +22,10 @@ jobs:
         run: west init -l config
 
       - name: West Update
-        run: west update --fetch always
+        run: |
+          west update --fetch always
+          ls -la zephyr || echo "zephyr/ not found"
+          ls -la zephyr/share/zephyr-package/cmake || echo "Zephyr CMake not found"
 
       - name: Debug ZMK
         run: |
@@ -35,4 +38,5 @@ jobs:
           cd zmk/app || echo "cd zmk/app failed"
           pwd
           ls -la
+          export ZEPHYR_BASE=${{ github.workspace }}/zephyr
           west build -p -b nice_nano_v2 -- -DSHIELD=bbq20 -DZMK_CONFIG=${{ github.workspace }}/config
