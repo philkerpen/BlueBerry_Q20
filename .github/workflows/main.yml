@@ -25,10 +25,14 @@ jobs:
 
       - name: West Init
         run: |
-          # Clone ZMK repository
+          # Ensure we're in the correct directory
+          cd /home/runner/work/BlueBerry_Q20/BlueBerry_Q20
+          # Clone ZMK repository to a temporary directory
           git clone --branch main https://github.com/zmkfirmware/zmk /tmp/zmk
-          # Initialize west with the local manifest path
+          # Initialize west with the local manifest path in the current directory
           west init -l /tmp/zmk/app
+          # Clean up temporary directory
+          rm -rf /tmp/zmk
 
       - name: West Update
         run: |
@@ -38,7 +42,7 @@ jobs:
           cd zmk
           git reset --hard origin/main
           # Move your config into place (assuming config/ is your custom manifest)
-          mv config /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zmk/app/
+          mv ../config /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/zmk/app/
 
       - name: Debug ZMK Version
         run: |
