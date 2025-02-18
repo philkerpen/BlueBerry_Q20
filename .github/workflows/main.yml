@@ -2,29 +2,7 @@ name: Build ZMK Firmware
 on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-        with:
-          path: config
-
-      - name: Install West
-        run: pip install west
-
-      - name: West Init
-        run: cd config && west init -l .
-
-      - name: West Update
-        run: cd config && west update --fetch always
-
-      - name: Debug
-        run: |
-          ls -la config/zmk/app/include/dt-bindings/zmk || echo "input_transform.h missing"
-          ls -la config/zephyr || echo "zephyr/ missing"
-
-      - name: Build
-        run: |
-          cd config/zmk/app
-          export ZEPHYR_BASE=${{ github.workspace }}/config/zephyr
-          west build -p -b nice_nano_v2 -- -DSHIELD=bbq20 -DZMK_CONFIG=${{ github.workspace }}/config
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      config_dir: config
+      west_update: true  # Ensure update runs
