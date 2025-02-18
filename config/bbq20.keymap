@@ -38,13 +38,8 @@
 
 inverted_mouse_scroll {
         type = "custom";
-        #include <zmk/mouse.h>
-
         on-press = {
             if (ctx->axis == INPUT_REL_WHEEL) { // Check for vertical scroll
-                ctx->direction *= -1; // Invert the direction
-                return ZMK_BEHAVIOR_SUCCESS;
-            } else if (ctx->axis == INPUT_REL_HWHEEL){ // Check for horizontal scroll
                 ctx->direction *= -1; // Invert the direction
                 return ZMK_BEHAVIOR_SUCCESS;
             } else {
