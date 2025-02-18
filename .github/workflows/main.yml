@@ -3,3 +3,11 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      board: bbq20  # Specify your board if required; adjust as needed
+    steps:
+      - name: Ensure Latest ZMK Main
+        run: |
+          cd /home/runner/work/${{ github.repository }}/zmk
+          git fetch origin main
+          git reset --hard origin/main
