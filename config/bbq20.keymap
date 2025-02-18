@@ -36,6 +36,29 @@
 
     behaviors {
 
+inverted_mouse_scroll {
+        type = "custom";
+        #include <zmk/mouse.h>
+
+        on-press = {
+            if (ctx->axis == INPUT_REL_WHEEL) { // Check for vertical scroll
+                ctx->direction *= -1; // Invert the direction
+                return ZMK_BEHAVIOR_SUCCESS;
+            } else if (ctx->axis == INPUT_REL_HWHEEL){ // Check for horizontal scroll
+                ctx->direction *= -1; // Invert the direction
+                return ZMK_BEHAVIOR_SUCCESS;
+            } else {
+                return ZMK_BEHAVIOR_CONTINUE;
+            }
+        };
+    };
+
+    // Define a new behavior that just calls the default mouse scroll behavior
+    wrapped_mouse_scroll {
+        type = "behavior";
+        bindings = <&msc>; // Use the default msc behavior from mouse_scroll.dtsi
+    };
+
 // Tap Dance Behaviors
 
         td0: tap_dance_0 {
