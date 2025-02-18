@@ -30,19 +30,15 @@
     release-after-ms = <2500>;
     };
 
+&msc {
+    y-invert = true;
+    };
+
 / {
 
 //Behaviors Start Here:
 
     behaviors {
-
-	msc {
-		x-input-code = <INPUT_REL_HWHEEL>;
-		y-input-code = <INPUT_REL_WHEEL>;
-		y-invert = true; // Invert the y-axis (vertical) scroll
-		time-to-max-speed-ms = <300>;
-		acceleration-exponent = <0>;
-	};
 
 // Tap Dance Behaviors
 
