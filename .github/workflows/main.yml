@@ -3,11 +3,6 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        include:
-          - board: nice_nano_v2  # Adjust if your controller differs
-            shield: bbq20
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3  # Clones to ${{ github.workspace }}
@@ -15,15 +10,29 @@ jobs:
       - name: Install West
         run: pip install west
 
+      - name: Debug Checkout
+        run: |
+          echo "Workspace: ${{ github.workspace }}"
+          pwd
+          ls -la
+          ls -la config || echo "config/ not found"
+          cat config/west.yml || echo "west.yml missing"
+
       - name: West Init
-        run: west init -l config  # Uses ${{ github.workspace }}/config/west.yml
+        run: |
+          west init -l config || echo "Init failed"
 
       - name: West Update
         run: |
-          west update --fetch always
-          ls -la zmk/app/include/dt-bindings/zmk/ || echo "ZMK fetch failed"
+          west update --fetch always || echo "Update failed"
+          ls -la zmk || echo "zmk/ not found"
+          ls -la zmk/app || echo "zmk/app/ not found"
+          ls -la zmk/app/include/dt-bindings/zmk || echo "dt-bindings not found"
 
       - name: Build
         run: |
-          cd zmk  # Move to ZMK source directory
-          west build -p -b ${{ matrix.board }} -- -DSHIELD=${{ matrix.shield }} -DZMK_CONFIG=${{ github.workspace }}/config
+          cd zmk || echo "cd zmk failed"
+          pwd
+          ls -la
+          ls -la app || echo "app/ not found"
+          west build -p -b nice_nano_v2 -- -DSHIELD=bbq20 -DZMK_CONFIG=${{ github.workspace }}/config || echo "Build failed"
