@@ -6,24 +6,23 @@ jobs:
     strategy:
       matrix:
         include:
-          - board: bbq20  # From your build.yaml
+          - board: nice_nano_v2  # BBQ20 controller; adjust if different
+            shield: bbq20
     steps:
-      - name: Checkout Config Repo
-        uses: actions/checkout@v3
-        with:
-          path: config
+      - name: Checkout Repo
+        uses: actions/checkout@v3  # Clones to ${{ github.workspace }}
 
       - name: Install West
         run: pip install west
 
       - name: West Init
-        run: west init -l config
+        run: west init -l config  # Finds ${{ github.workspace }}/config/west.yml
 
       - name: West Update
-        run: |
-          west update --fetch always
-          ls -la zmk/app/include/dt-bindings/zmk/ || echo "ZMK fetch failed"
+        run: west update --fetch always
 
-      - name: Build Firmware
-        run: |
-          west build -p -b ${{ matrix.board }} -- -DZMK_CONFIG=${{ github.workspace }}/config
+      - name: Debug Files
+        run: ls -la zmk/app/include/dt-bindings/zmk/ || echo "ZMK fetch failed"
+
+      - name: Build
+        run: west build -p -b ${{ matrix.board }} -- -DSHIELD=${{ matrix.shield }} -DZMK_CONFIG=${{ github.workspace }}/config
