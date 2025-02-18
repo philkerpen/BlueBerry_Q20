@@ -2,41 +2,7 @@ name: Build ZMK Firmware
 on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-
-      - name: Install West
-        run: pip install west
-
-      - name: Debug Checkout
-        run: |
-          echo "Workspace: ${{ github.workspace }}"
-          pwd
-          ls -la
-          ls -la config || echo "config/ not found"
-          cat config/west.yml || echo "west.yml missing"
-
-      - name: West Init
-        run: west init -l config
-
-      - name: West Update
-        run: |
-          west update --fetch always
-          ls -la zephyr || echo "zephyr/ not found"
-          ls -la zephyr/share/zephyr-package/cmake || echo "Zephyr CMake not found"
-
-      - name: Debug ZMK
-        run: |
-          ls -la zmk || echo "zmk/ not found"
-          ls -la zmk/app || echo "zmk/app/ not found"
-          ls -la zmk/app/include/dt-bindings/zmk || echo "dt-bindings not found"
-
-      - name: Build
-        run: |
-          cd zmk/app || echo "cd zmk/app failed"
-          pwd
-          ls -la
-          export ZEPHYR_BASE=${{ github.workspace }}/zephyr
-          west build -p -b nice_nano_v2 -- -DSHIELD=bbq20 -DZMK_CONFIG=${{ github.workspace }}/config
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      config_path: config  # Matches your west.yml
+      build_matrix_file: config/build.yaml
