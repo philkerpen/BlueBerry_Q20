@@ -24,12 +24,13 @@ jobs:
           ls -la /home/runner/work/BlueBerry_Q20/BlueBerry_Q20/config
 
       - name: West Init
-        run: west init --mr main
+        run: west init -m https://github.com/zmkfirmware/zmk --mr main
 
       - name: West Update
         run: |
           cd /home/runner/work/BlueBerry_Q20/BlueBerry_Q20
           west update --fetch always --narrow --rebase
+          # Ensure ZMK is at the latest main
           cd zmk
           git reset --hard origin/main
           # Move your config into place (assuming config/ is your custom manifest)
