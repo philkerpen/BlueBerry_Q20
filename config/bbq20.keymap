@@ -218,7 +218,7 @@
 	      	tapping-term-ms = <2000>;
 	      	quick-tap-ms = <125>;
 	      	require-prior-idle-ms = <125>;
-	      	bindings = <&tap>, <&tap>;
+	      	bindings = <&kp>, <&tap>;
    	 };
 
 	msk: mod_Stick_Pre {
