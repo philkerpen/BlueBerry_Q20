@@ -119,13 +119,8 @@
 	tab_tab_enter: tab_tab_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-            &kp TAB
-            &wait-ms 50
-            &kp TAB
-            &wait-ms 50
-            &kp ENTER
-            >;
+            wait-ms = <50>;
+            bindings = <&kp TAB &kp TAB &kp ENTER>;
         };
 
 	tap: tap {
