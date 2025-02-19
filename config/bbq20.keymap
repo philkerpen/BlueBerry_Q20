@@ -116,6 +116,12 @@
             bindings = <&kp K_PWR &ext_power EP_TOG>;
         };
 
+	tab_tab_enter: tab_tab_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp TAB &kp ENTER>;
+        };
+
 	tap: tap {
 		compatible = "zmk,behavior-macro-one-param";
      		#binding-cells = <1>;
@@ -204,16 +210,14 @@
 	      	bindings = <&tap>, <&tap>;
    	 };
 
-// work-around for Google messages lacking enter-to-send
-
-  	tte: tab_tab_enter {
+  	longtt: long_tap_tap {
 		compatible = "zmk,behavior-hold-tap";
-		#binding-cells = <0>;
+		#binding-cells = <2>;
 	     	flavor = "tap-preferred";
 	      	tapping-term-ms = <2000>;
 	      	quick-tap-ms = <125>;
 	      	require-prior-idle-ms = <125>;
-	      	bindings = <&kp TAB &kp TAB &kp ENTER>, <&kp ENTER>;
+	      	bindings = <&tap>, <&tap>;
    	 };
 
 	msk: mod_Stick_Pre {
@@ -286,7 +290,7 @@
 
     &mtt LS(Q) Q	&mtt LS(W) W      &mtt LS(E) E	&mtt LS(R) R     &mtt LS(T) T	&mtt LS(Y) Y	&mtt LS(U) U	&mtt LS(I) I	&mtt LS(O) O	    &mtt LS(P) P
     &mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L        &kp BSPC
-    &ALTL		&mtt LS(Z) Z      &mtt LS(X) X	&mtt LS(C) C     &mtt LS(V) V	&mtt LS(B) B	&mtt LS(N) N	&mtt LS(M) M	&mtt PSCRN DLLR     &tte
+    &ALTL		&mtt LS(Z) Z      &mtt LS(X) X	&mtt LS(C) C     &mtt LS(V) V	&mtt LS(B) B	&mtt LS(N) N	&mtt LS(M) M	&mtt PSCRN DLLR     &longtt &tab_tab_enter ENTER
 
     		         &SHFT				 &pckt 0 LG(N) 	      &kp SPACE			&EALT		 &sk LCTRL
 
