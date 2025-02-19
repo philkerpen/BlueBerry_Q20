@@ -43,7 +43,7 @@ scroll_inverter: scroll_inverter {
         #input-processor-cells = <1>;
         type = <INPUT_EV_REL>;
         y-codes = <INPUT_REL_WHEEL>;  // Target vertical scroll events
-        transforms = 0x01;  // Invert the Y-axis (vertical scroll)
+        transforms = <0x01>;  // Invert the Y-axis (vertical scroll)
     };
 
     &msc_input_listener {
