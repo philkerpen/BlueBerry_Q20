@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: MIT
  */
 #include <behaviors.dtsi>
-#include <input/processors.dtsi> // Needed for scroll inversion
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <processors.dtsi> // Needed for scroll inversion
 
 #define ALT 1
 #define UPPER 2
