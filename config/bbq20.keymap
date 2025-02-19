@@ -48,10 +48,6 @@ invert_y: invert_y {
     transforms = <0x01>;            // Invert the Y-axis
 };
 
-&msc_input_listener {
-    input-processors = <&invert_y>; // Apply the transform to this listener
-};
-
 
 // Tap Dance Behaviors
 
@@ -268,6 +264,12 @@ invert_y: invert_y {
     keymap {
         compatible = "zmk,keymap";
         default_layer {
+
+&msc_input_listener {
+    input-processors = <&invert_y>; // Apply the transform to this listener
+};
+
+
             bindings = <
 
         /*
