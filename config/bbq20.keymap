@@ -10,17 +10,17 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/input_transform.h>
+/ #include <dt-bindings/zmk/input_transform.h>
 
 #define ALT 1
 #define UPPER 2
 #define MEDIA 3
 
 // Invert vertical scroll
-
-&msc {
-    zip_xy_transform = <INPUT_TRANSFORM_Y_INVERT>;
-    };
+/
+/&msc {
+/    zip_xy_transform = <INPUT_TRANSFORM_Y_INVERT>;
+/    };
 
 // Standard Behavior Configurations:
 
@@ -204,6 +204,16 @@
 	      	bindings = <&tap>, <&tap>;
    	 };
 
+  	longtt: long_tap_tap {
+		compatible = "zmk,behavior-hold-tap";
+		#binding-cells = <2>;
+	     	flavor = "tap-preferred";
+	      	tapping-term-ms = <2000>;
+	      	quick-tap-ms = <125>;
+	      	require-prior-idle-ms = <125>;
+	      	bindings = <&tap>, <&tap>;
+   	 };
+
 	msk: mod_Stick_Pre {
 	      compatible = "zmk,behavior-hold-tap";
 	      #binding-cells = <2>;
@@ -274,7 +284,7 @@
 
     &mtt LS(Q) Q	&mtt LS(W) W      &mtt LS(E) E	&mtt LS(R) R     &mtt LS(T) T	&mtt LS(Y) Y	&mtt LS(U) U	&mtt LS(I) I	&mtt LS(O) O	    &mtt LS(P) P
     &mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L        &kp BSPC
-    &ALTL		&mtt LS(Z) Z      &mtt LS(X) X	&mtt LS(C) C     &mtt LS(V) V	&mtt LS(B) B	&mtt LS(N) N	&mtt LS(M) M	&mtt PSCRN DLLR     &kp ENTER
+    &ALTL		&mtt LS(Z) Z      &mtt LS(X) X	&mtt LS(C) C     &mtt LS(V) V	&mtt LS(B) B	&mtt LS(N) N	&mtt LS(M) M	&mtt PSCRN DLLR     &longtt C_AC_SEND ENTER
 
     		         &SHFT				 &pckt 0 LG(N) 	      &kp SPACE			&EALT		 &sk LCTRL
 
