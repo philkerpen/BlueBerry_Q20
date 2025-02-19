@@ -38,18 +38,7 @@
 
 // Invert vertical scroll
 
-scroll_inverter: scroll_inverter {
-        compatible = "zmk,input-processor-transform";
-        #input-processor-cells = <1>;
-        type = <INPUT_EV_REL>;
-        y-codes = <INPUT_REL_WHEEL>;  // Target vertical scroll events
-        transforms = <0x01>;  // Invert the Y-axis (vertical scroll)
-    };
 
-    &msc_input_listener {
-        input-processors = <&scroll_inverter>;
-    };
-};
 
 
 // Tap Dance Behaviors
