@@ -10,7 +10,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include "/__w/BlueBerry_Q20/zmk/app/dts/input/processors.dtsi"
 
 #define ALT 1
 #define UPPER 2
@@ -36,21 +35,6 @@
 //Behaviors Start Here:
 
     behaviors {
-
-// Invert vertical scroll
-
-invert_y: invert_y {
-    compatible = "zmk,input-processor-transform";
-    #input-processor-cells = <1>;
-    type = <INPUT_EV_REL>;          // Relative input event type
-    y-codes = <INPUT_REL_WHEEL>;    // Target vertical scroll (wheel)
-    transforms = <0x01>;            // Invert the Y-axis
-};
-
-&msc_input_listener {
-    input-processors = <&invert_y>; // Apply the transform to this listener
-};
-
 
 // Tap Dance Behaviors
 
@@ -219,7 +203,7 @@ invert_y: invert_y {
 	      	tapping-term-ms = <500>;
 	      	quick-tap-ms = <125>;
 	      	require-prior-idle-ms = <125>;
-	      	bindings = <&tap>, <&tap>;
+	      	bindings = <&kp>, <&kp>;
    	 };
 
 	msk: mod_Stick_Pre {
