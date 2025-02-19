@@ -15,20 +15,6 @@
 #define UPPER 2
 #define MEDIA 3
 
-// Invert vertical scroll
-
-invert_y: invert_y {
-    compatible = "zmk,input-processor-transform";
-    #input-processor-cells = <1>;
-    type = <INPUT_EV_REL>;          // Relative input event type
-    y-codes = <INPUT_REL_WHEEL>;    // Target vertical scroll (wheel)
-    transforms = <0x01>;            // Invert the Y-axis
-};
-
-&msc_input_listener {
-    input-processors = <&invert_y>; // Apply the transform to this listener
-};
-
 // Standard Behavior Configurations:
 
 &mt {
@@ -52,7 +38,19 @@ invert_y: invert_y {
 
 // Invert vertical scroll
 
+// Invert vertical scroll
 
+invert_y: invert_y {
+    compatible = "zmk,input-processor-transform";
+    #input-processor-cells = <1>;
+    type = <INPUT_EV_REL>;          // Relative input event type
+    y-codes = <INPUT_REL_WHEEL>;    // Target vertical scroll (wheel)
+    transforms = <0x01>;            // Invert the Y-axis
+};
+
+&msc_input_listener {
+    input-processors = <&invert_y>; // Apply the transform to this listener
+};
 
 
 // Tap Dance Behaviors
