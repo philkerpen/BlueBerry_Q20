@@ -108,12 +108,6 @@
             #binding-cells = <0>;
             bindings = <&kp K_PWR &ext_power EP_TOG>;
         };
-
-	kc_app: kc_app {
-		compatible = "zmk,behavior-macro";
-            	#binding-cells = <0>;
-            	bindings = <&kp 0x07 &kp 0x65>;
-        };
 		
 	tap: tap {
 		compatible = "zmk,behavior-macro-one-param";
@@ -279,7 +273,7 @@
         */
                  		&none                                                                                	&none
 
-		            &kc_app		 &kp C_AC_HOME	      &mkp LCLK			&kp LG(BSPC)		 &mou_key CLCK RCLK
+		        &kp 0x07 0x65		 &kp C_AC_HOME	      &mkp LCLK			&kp LG(BSPC)		 &mou_key CLCK RCLK
 
     &mtt LS(Q) Q	&mtt LS(W) W      &mtt LS(E) E	&mtt LS(R) R     &mtt LS(T) T	&mtt LS(Y) Y	&mtt LS(U) U	&mtt LS(I) I	&mtt LS(O) O	    &mtt LS(P) P
     &mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L        &kp BSPC
