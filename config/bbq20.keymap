@@ -112,7 +112,7 @@
 	kc_app: kc_app {
 		compatible = "zmk,behavior-macro";
             	#binding-cells = <0>;
-            	bindings = <&kp 0x07 0x65>;
+            	bindings = <&kp 0x07 &kp 0x65>;
         };
 		
 	tap: tap {
