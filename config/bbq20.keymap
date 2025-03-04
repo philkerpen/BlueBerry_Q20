@@ -112,7 +112,7 @@
                 &move_y 32767  // Move down as far as possible
                 &move_y 32767  // Repeat to ensure bottom
                 &lclk          // Click down
-                &move_y -16384 // Move up half range
+                &move_y <-16384> // Move up half range
                 &release_lclk  // Click up
             >;
         };
