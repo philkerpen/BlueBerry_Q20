@@ -105,15 +105,11 @@
 
 // Macro Behaviors
 
-	swipe_up: swipe_up {
+        test_move: test_move {
             compatible = "zmk,macro";
             #binding-cells = <0>;
             bindings = <
-                &move_y 32767  // Move down as far as possible
-                &move_y 32767  // Repeat to ensure bottom
-                &lclk          // Click down
-                &move_y <-16384> // Move up half range
-                &release_lclk  // Click up
+                &move_y 32767  // Should work fine
             >;
         };
 
@@ -287,7 +283,7 @@
         */
                  		&none                                                                                	&none
 
-		           &swipe_up		 &kp C_AC_HOME	      &mkp LCLK			&kp LG(BSPC)		 &mou_key CLCK RCLK
+		           &test_move		 &kp C_AC_HOME	      &mkp LCLK			&kp LG(BSPC)		 &mou_key CLCK RCLK
 
     &mtt LS(Q) Q	&mtt LS(W) W      &mtt LS(E) E	&mtt LS(R) R     &mtt LS(T) T	&mtt LS(Y) Y	&mtt LS(U) U	&mtt LS(I) I	&mtt LS(O) O	    &mtt LS(P) P
     &mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L        &kp BSPC
