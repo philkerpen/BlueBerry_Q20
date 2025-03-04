@@ -106,7 +106,7 @@
 // Macro Behaviors
 
 	test_move: test_move {
-            compatible = "zmk,macro";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
                 &mmv MOVE_DOWN 1000  // From official docs
