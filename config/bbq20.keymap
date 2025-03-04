@@ -15,7 +15,7 @@
 #define ALT 1
 #define UPPER 2
 #define MEDIA 3
-#define KC_RECENTS 0x0C00223
+#define KC_RECENTS 0x0700BB
 
 // Standard Behavior Configurations:
 
